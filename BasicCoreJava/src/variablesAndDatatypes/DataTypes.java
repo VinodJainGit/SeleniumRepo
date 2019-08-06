@@ -15,15 +15,16 @@ public class DataTypes {
 	   
 	   //Decimal values
 	   double markes=7.4;
+	   System.out.println(markes);
 	   
 	   
 	   //Boolean values
 	   boolean status=true;
-	   
+	   System.out.println(status);
 	   
 	   //Strings
 	   String name="Vinod";
-	   
+	   System.out.println(name);
 	   
 	   //for integer values
 	   byte a=10;
