@@ -20,8 +20,20 @@ public class Swap {
 		
 		System.out.printf("x:%d, y:%d",x, y);
 		
-		swap(x,y);
-		System.out.printf("x:%d, y:%d",x,y);
+		/*
+		 * swap(x,y); System.out.printf("x:%d, y:%d",x,y);
+		 */
+		//You can call swap function or you can also write code inside main directly
+		
+		int t=x;
+		x=y;
+		y=t;
+		
+		//System.out.printf("\nx:%d, y:%d \n",x, y);
+		System.out.println("\n");
+		System.out.println(x);
+		System.out.println(y);
+		
 	}
 
 }
