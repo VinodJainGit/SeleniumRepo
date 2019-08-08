@@ -19,16 +19,24 @@ public class Array2 {
 		 str [2][1]="P3";
 		 
 		 
-		 for (int i = 0; i <3; i++) 
+		/*
+		 * for (int i = 0; i <3; i++) {
+		 * 
+		 * for (int j = 0; j <2; j++) { System.out.print(str[i][j]+" ");
+		 * 
+		 * 
+		 * } System.out.println(); }
+		 */
+		 
+		 for(int i=0; i<str.length ;i++ )
 		 {
-			
-			 for (int j = 0; j <2; j++) 
+			 for(int j=0; j<str[i].length; j++)
 			 {
-				System.out.println(str[i][j]);
-				
-				 
-			}
-		}
+				 System.out.print(str[i][j]+" ");
+			 }
+			 System.out.println();
+		 }
+		 
 
 	}
 
