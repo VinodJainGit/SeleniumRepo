@@ -5,10 +5,9 @@ public class User {
 	public static void main(String[] args) 
 	{
 		Car maruti=new Car();
-		
 		maruti.color="white";
 		maruti.model="swift";
-		maruti.wheels=6;
+		//maruti.wheels=6;
 		maruti.specification();
 		
 		Car tata=new Car();

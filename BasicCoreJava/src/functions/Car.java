@@ -10,5 +10,18 @@ public class Car
 	{
 		System.out.println(color+" "+model+" car is having"+" "+wheels+ " wheels");
 	}
+	
+	// Default constructor
+	public Car()
+	{
+		
+	}
+	
+	//Parameterized constructor
+	public Car(String color1, String model1)
+	{
+		color=color1;
+		model=model1;
+	}
 
 }
