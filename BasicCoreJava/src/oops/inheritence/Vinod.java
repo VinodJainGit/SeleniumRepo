@@ -18,6 +18,24 @@ public class Vinod {
 		sm.calling();
 		sm.texting();
 		
+		
+		//We can create abstraction
+		
+	Telephone p;
+	
+	p=new Telephone();
+	p=new Mobile();
+	p=new SmartPhone();
+	
+	
+	
+	
+	SmartPhone q;
+	
+	q =(SmartPhone)new Telephone();	
+	q.calling();
+	q.texting();
+	q.internet();
 
 	}
 
