@@ -4,7 +4,7 @@ public class IntegerArrayInReverseProgram6 {
 
 	public static void main(String[] args) 
 	{
-		int [] arr=new int [] {1,2,3,4,5,6};
+		int arr[]={1,2,3,4,5,6};
 		
 		System.out.println("Original Array :");
 		for(int i=0;i<arr.length;i++)
@@ -21,6 +21,8 @@ public class IntegerArrayInReverseProgram6 {
 		}
 		System.out.println();
 
+		int abc[]=new int[6];
+		
 	}
 
 }
