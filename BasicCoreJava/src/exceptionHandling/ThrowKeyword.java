@@ -1,5 +1,7 @@
 package exceptionHandling;
 
+import java.io.FileNotFoundException;
+
 public class ThrowKeyword {
 
 	public static void main(String[] args)

@@ -3,7 +3,7 @@ package exceptionHandling;
 public  class FinalClass {
 
 	
-public final  void test() 
+public  void test() 
 {
 	
 }

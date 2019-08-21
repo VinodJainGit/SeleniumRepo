@@ -43,8 +43,8 @@ public class HomeWork {
 		
 		while(it.hasNext())
 		{
-			System.out.print(keys);
-			System.out.println(result.get(it.next()));
+			String str=it.next();
+			System.out.println(str+" "+result.get(str));
 		}
 		
         
