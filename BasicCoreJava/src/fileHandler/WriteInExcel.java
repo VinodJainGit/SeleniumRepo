@@ -2,6 +2,7 @@ package fileHandler;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
@@ -9,11 +10,11 @@ import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
-public class ReadExcel {
+public class WriteInExcel {
 
-	public static void main(String[] args) throws IOException
+	public static void main(String[] args) throws IOException 
 	{
-		String filepath="D:\\SeleniumRepo\\BasicCoreJava\\src\\fileHandler\\TestData.xls";
+       String filepath="D:\\SeleniumRepo\\BasicCoreJava\\src\\fileHandler\\TestData.xls";
 		
 		FileInputStream file=new FileInputStream(filepath);
 		
@@ -26,21 +27,21 @@ public class ReadExcel {
 		
 		
 		//Rows
-		HSSFRow row=sheet.getRow(0);
-		
+		HSSFRow row=sheet.getRow(11);
+		if(row ==null)
+			row=sheet.createRow(11);
 		
 		//Cell
-		HSSFCell cell=row.getCell(0);
+		HSSFCell cell=row.getCell(2);
+		if(cell ==null)
+			cell=row.createCell(2);
 		
-		String value=cell.getStringCellValue();
+		cell.setCellValue("Vinod");
 		
-		System.out.println(value);
+		FileOutputStream filewrite=new FileOutputStream(filepath);
 		
-		System.out.println(row.getLastCellNum());
-		System.out.println(sheet.getLastRowNum());
-		System.out.println(sheet.getFirstRowNum());
-		
-		
+		wb.write(filewrite);
+
 	}
 
 }

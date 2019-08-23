@@ -38,7 +38,7 @@ public class HomeWork {
 		
         Set<String> keys=result.keySet();
 		
-		Iterator<String> it=keys.iterator();
+		Iterator<String> it=keys.iterator(); 
 		
 		
 		while(it.hasNext())
