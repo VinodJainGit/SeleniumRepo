@@ -26,17 +26,16 @@ public class HWTestNGClass
 		 int cols=reader.getColCount("sheet1");
 		 //System.out.println(cols);
 		 
+		 String colName="vinod";
+		 
 		 String [][] data=new String[rows][cols];
 		 
 		 for (int r = 1; r <= rows; r++) 
 		 {
-			 for (int c = 1; c <= cols; c++) 
-			 {
-				// System.out.print(reader.getCellData("sheet1", r,c)+" ");
-				 
-				 data[r-1][c-1]=reader.getCellData("sheet1", r,c);
+			 
+				 //data[r-1][c-1]=reader.getCellData("sheet1", r,colName);
 				
-			}
+			
 			
 		 }
 		

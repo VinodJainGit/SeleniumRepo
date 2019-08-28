@@ -32,7 +32,7 @@ public class HomeWork {
 		m3.put("sub4", 55);
 		m3.put("sub5", 55);
 		
-		map.put("Vinod", m3);
+		map.put("Vinod", m1);
 		
 		Map<String, Integer> result=getPercentage(map);
 		

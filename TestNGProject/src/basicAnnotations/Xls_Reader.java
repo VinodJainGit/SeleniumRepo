@@ -45,6 +45,34 @@ public class Xls_Reader
 		
 	}
 	
+	
+	/*
+	 * public String getCellData(String sheetName,int rowNum, String colName) throws
+	 * IOException { FileInputStream file=new FileInputStream(filepath);
+	 * 
+	 * 
+	 * //Work book HSSFWorkbook wb=new HSSFWorkbook(file);
+	 * 
+	 * //Work sheet HSSFSheet sheet= wb.getSheet(sheetName);
+	 * 
+	 * 
+	 * //Rows HSSFRow row=sheet.getRow(rowNum-1);
+	 * 
+	 * 
+	 * 
+	 * 
+	 * //Cell Cell cell1 = row.getCell(i,Row.CREATE_NULL_AS_BLANK); String
+	 * cellValue1 = cell1.getStringCellValue(); HSSFCell cell=row.getCell(colName);
+	 * 
+	 * String value=cell.getStringCellValue();
+	 * 
+	 * 
+	 * return value;
+	 * 
+	 * }
+	 */
+	
+	
 	public void setCellData(String sheetName,int rowNum, int colNum,String value) throws IOException
 	{
         FileInputStream file=new FileInputStream(filepath);
