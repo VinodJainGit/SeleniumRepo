@@ -13,7 +13,7 @@ public class TestXlsReader {
 		 
 		 int cols=reader.getColCount("sheet1");
 		 //System.out.println(cols);
-		 
+		
 		 
 		 for (int r = 1; r <= rows; r++) 
 		 {
