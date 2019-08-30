@@ -4,6 +4,7 @@ package basicSelenium;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,7 +37,7 @@ public class TestClass2
 		  dr.findElement(By.xpath("//input[@value='oneway']")).click();
 		  
 		  
-		  //Dropdown
+		  //Dropdown Passengers
 		  WebElement ele=dr.findElement(By.name("passCount"));
 		  
 		  Select sel=new Select(ele);
@@ -49,10 +50,21 @@ public class TestClass2
 		  
 		 sel.selectByVisibleText("4");
 		 
+		/*
+		 * // Dropdown Departing From WebElement
+		 * ele1=dr.findElement(By.className("fromPort"));
+		 * 
+		 * Select sel2=new Select(ele1);
+		 * 
+		 * sel.selectByValue("Frankfurt"); Thread.sleep(2000);
+		 */
 		 
+		 
+		
+		 //Continue button
 		 dr.findElement(By.name("findFlights")).click();
 		 
-		 
+		 //Table
 		 WebElement table=dr.findElement(By.xpath("//table[@cellpadding='2'][@cellspacing='1']/tbody"));
 		 
 		 List<WebElement> rows =table.findElements(By.tagName("tr"));
@@ -69,6 +81,42 @@ public class TestClass2
 			 
 		 }
 		 
+		 dr.findElement(By.name("reserveFlights")).click();
+		 
+		 dr.findElement(By.name("ticketLess")).click();
+		 
+		 System.out.println(dr.findElement(By.name("ticketLess")).isSelected());
 		
+		 WebElement country=dr.findElement(By.name("delCountry"));
+		 
+		 Select selcntry=new Select(country);
+		 
+		 selcntry.selectByIndex(2);
+		 
+		Thread.sleep(2000); 
+		 
+		Alert alt= dr.switchTo().alert();
+		 
+		System.out.println(alt.getText());
+		
+		//alt.accept();
+		 
+		alt.dismiss();
+		dr.findElement(By.name("buyFlights")).click();
+		
+		
+		System.out.println(dr.findElement(By.xpath("//font[@size='+1']")).getText());
+		
+		
+		
+		
+		
+		
+		
+		dr.close(); 
+		 
+		 
+		 
+		 
 	}
 }
