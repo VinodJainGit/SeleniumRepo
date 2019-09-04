@@ -104,6 +104,39 @@ public class Xls_Reader
 		
 	}
 	
+	
+	public void setCellData2(String sheetName,int rowNum, int colNum,String value) throws IOException
+	{
+        FileInputStream file=new FileInputStream(filepath);
+		
+		
+		//Work book
+		HSSFWorkbook wb=new HSSFWorkbook(file);
+		
+		//Work sheet
+		HSSFSheet sheet= wb.getSheet(sheetName);
+		
+		
+		//Rows
+		HSSFRow row=sheet.getRow(rowNum-1);
+		if(row ==null)
+			row=sheet.createRow(rowNum-1);
+		
+		//Cell
+		HSSFCell cell=row.getCell(colNum-1);
+		if(cell ==null)
+			cell=row.createCell(colNum-1);
+		
+		cell.setCellValue(value);
+		
+		FileOutputStream filewrite=new FileOutputStream(filepath);
+		
+		wb.write(filewrite);
+		
+		
+	}
+	
+	
 	public int getRowCount(String sheetName) throws IOException
 	{
        FileInputStream file=new FileInputStream(filepath);

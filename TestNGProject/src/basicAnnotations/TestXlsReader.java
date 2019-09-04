@@ -20,6 +20,7 @@ public class TestXlsReader {
 			 for (int c = 1; c <= cols; c++) 
 			 {
 				 System.out.print(reader.getCellData("sheet1", r,c)+" ");
+				 reader.setCellData("sheet1", r, c, "ABC");
 				
 			}
 			System.out.println();

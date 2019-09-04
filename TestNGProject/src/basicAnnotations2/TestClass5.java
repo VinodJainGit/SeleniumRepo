@@ -71,14 +71,5 @@ public class TestClass5
 		
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

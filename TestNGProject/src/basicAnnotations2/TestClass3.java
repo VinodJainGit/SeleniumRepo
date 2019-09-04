@@ -56,16 +56,5 @@ public class TestClass3
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

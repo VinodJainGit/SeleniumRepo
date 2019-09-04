@@ -56,7 +56,7 @@ public class TestNGClass1
 			 {
 				// System.out.print(reader.getCellData("sheet1", r,c)+" ");
 				 
-				 data[r-1][c-1]=reader.getCellData("sheet1", r,c);
+				
 				
 			}
 			

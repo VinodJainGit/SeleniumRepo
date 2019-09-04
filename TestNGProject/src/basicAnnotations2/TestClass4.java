@@ -74,13 +74,4 @@ public class TestClass4
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

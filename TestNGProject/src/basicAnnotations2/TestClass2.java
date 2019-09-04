@@ -76,13 +76,5 @@ public class TestClass2
 	}
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

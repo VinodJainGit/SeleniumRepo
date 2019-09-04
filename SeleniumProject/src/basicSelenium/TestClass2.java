@@ -39,6 +39,7 @@ public class TestClass2
 		  
 		  //Dropdown Passengers
 		  WebElement ele=dr.findElement(By.name("passCount"));
+		 
 		  
 		  Select sel=new Select(ele);
 		  
@@ -50,14 +51,14 @@ public class TestClass2
 		  
 		 sel.selectByVisibleText("4");
 		 
-		/*
-		 * // Dropdown Departing From WebElement
-		 * ele1=dr.findElement(By.className("fromPort"));
-		 * 
-		 * Select sel2=new Select(ele1);
-		 * 
-		 * sel.selectByValue("Frankfurt"); Thread.sleep(2000);
-		 */
+		
+		  // Dropdown Departing From 
+		 WebElement ele1=dr.findElement(By.name("fromPort"));
+		  
+		  Select sel2=new Select(ele1);
+		  
+		  sel2.selectByValue("Frankfurt"); Thread.sleep(2000);
+		 
 		 
 		 
 		
