@@ -8,20 +8,21 @@ import org.testng.asserts.SoftAssert;
 
 import configuration.Config;
 import library.ApplicationLibrary;
+import pages.FlightFinder;
 import pages.HomePage;
 
 public class TC_BookAFlightOneWayOnePassanger 
 {
+	WebDriver dr=null;
 	@Test
-	public void script()
+	public void login()
 	{
 		ApplicationLibrary lib=new ApplicationLibrary();
-		WebDriver dr=null;
+	   	
 		
 		SoftAssert as=new SoftAssert(); //This is soft assertion
 		
-		try
-		{
+		
 			//Launche browser
 			dr=lib.launchBrowser("Chrome");
 			Assert.assertTrue(dr!=null); //This is hard assertion
@@ -37,18 +38,21 @@ public class TC_BookAFlightOneWayOnePassanger
 			//Validation
 			as.assertTrue(!dr.getTitle().equals(title)); //Checked title of two pages i.e. home page and login
 			
-			
-		}catch (Exception e)
-		{
-			//Call Recovery scenario
-			
-		}finally 
-		{
-			if(dr!=null)
+			//if(dr!=null)
 			//dr.close();
 			as.assertAll();
 			
-		}
+	}
+	
+	@Test(dependsOnMethods = {"login"})
+	public void bookAFLight() 
+	{
+		FlightFinder flight= new FlightFinder(dr);
+		
+		flight.clicOneWay();
+		flight.selectPassanger("1");
+		flight.clickOnContinue();
+		
 		
 	}
 	
